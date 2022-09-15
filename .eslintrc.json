@@ -20,8 +20,19 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["react"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "plugins": ["react", "import"],
   "rules": {
+    "import/no-unresolved": "error",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
     "react/function-component-definition": [
@@ -30,6 +41,10 @@
         "namedComponents": ["function-declaration", "arrow-function"],
         "unnamedComponents": ["function-expression", "arrow-function"]
       }
+    ],
+    "import/order": [
+      "error",
+      { "groups": ["type", "object", "builtin", "external", "internal", "parent", "sibling", "index"] }
     ]
   }
 }
