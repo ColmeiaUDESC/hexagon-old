@@ -1,6 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@prisma/client': ^4.3.1
+  '@tanstack/react-query': ^4.3.4
+  '@trpc/client': 10.0.0-proxy-alpha.76
+  '@trpc/next': 10.0.0-proxy-alpha.76
+  '@trpc/react': 10.0.0-proxy-alpha.76
+  '@trpc/server': 10.0.0-proxy-alpha.76
   '@types/node': 18.7.18
   '@types/react': 18.0.20
   '@types/react-dom': 18.0.6
@@ -18,15 +24,27 @@ specifiers:
   next: 12.3.0
   next-auth: ^4.10.3
   prettier: ^2.7.1
+  prisma: ^4.3.1
   react: 18.2.0
   react-dom: 18.2.0
+  superjson: ^1.10.0
   typescript: 4.8.3
+  zod: ^3.19.1
 
 dependencies:
+  '@prisma/client': 4.3.1_prisma@4.3.1
+  '@tanstack/react-query': 4.3.4_biqbaboplfbrettd7655fr4n2y
+  '@trpc/client': 10.0.0-proxy-alpha.76_lrdkizc3pqff3x6qfp2kxksa4u
+  '@trpc/next': 10.0.0-proxy-alpha.76_64strexlqkfkld3oed2bw3khry
+  '@trpc/react': 10.0.0-proxy-alpha.76_pfpukihnog6vr3xtrgkjgdoi54
+  '@trpc/server': 10.0.0-proxy-alpha.76
   next: 12.3.0_biqbaboplfbrettd7655fr4n2y
   next-auth: 4.10.3_biqbaboplfbrettd7655fr4n2y
+  prisma: 4.3.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  superjson: 1.10.0
+  zod: 3.19.1
 
 devDependencies:
   '@types/node': 18.7.18
@@ -255,6 +273,29 @@ packages:
     resolution: {integrity: sha512-MSAs9t3Go7GUkMhpKC44T58DJ5KGk2vBo+h1cqQeqlMfdGkxaVB78ZWpv9gYi/g2fa4sopag9gJsNvS8XGgWJA==}
     dev: false
 
+  /@prisma/client/4.3.1_prisma@4.3.1:
+    resolution: {integrity: sha512-FA0/d1VMJNWqzU7WVWTNWJ+lGOLR9JUBnF73GdIPAEVo/6dWk4gHx0EmgeU+SMv4MZoxgOeTBJF2azhg7x0hMw==}
+    engines: {node: '>=14.17'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 4.3.0-32.c875e43600dfe042452e0b868f7a48b817b9640b
+      prisma: 4.3.1
+    dev: false
+
+  /@prisma/engines-version/4.3.0-32.c875e43600dfe042452e0b868f7a48b817b9640b:
+    resolution: {integrity: sha512-8yWpXkQRmiSfsi2Wb/ZS5D3RFbeu/btL9Pm/gdF4phB0Lo5KGsDFMxFMgaD64mwED2nHc8ZaEJg/+4Jymb9Znw==}
+    dev: false
+
+  /@prisma/engines/4.3.1:
+    resolution: {integrity: sha512-4JF/uMaEDAPdcdZNOrnzE3BvrbGpjgV0FcPT3EVoi6I86fWkloqqxBt+KcK/+fIRR0Pxj66uGR9wVH8U1Y13JA==}
+    requiresBuild: true
+    dev: false
+
   /@rushstack/eslint-patch/1.2.0:
     resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
     dev: true
@@ -263,6 +304,77 @@ packages:
     resolution: {integrity: sha512-rEUrBSGIoSFuYxwBYtlUFMlE2CwGhmW+w9355/5oduSw8e5h2+Tj4UrAGNNgP9915++wj5vkQo0UuOBqOAq4nw==}
     dependencies:
       tslib: 2.4.0
+    dev: false
+
+  /@tanstack/query-core/4.3.4:
+    resolution: {integrity: sha512-NLAe3j5Vk1yYEtoPP5fPGPjRzkZPx67KUM3f14L3InziJZJ0wVecCh7uKfgYkbRKJSeq6PlbND7iuCGdTplN6Q==}
+    dev: false
+
+  /@tanstack/react-query/4.3.4_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-IiAo+B8bxphEpO7xwLQaCptd2rY4Ef3pW1q9J3pT66G+J/st4QpGQ+cSm9iESp9ccRy1YNUk3klk/hQtWewl6g==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@tanstack/query-core': 4.3.4
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
+    dev: false
+
+  /@trpc/client/10.0.0-proxy-alpha.76_lrdkizc3pqff3x6qfp2kxksa4u:
+    resolution: {integrity: sha512-x/iGhda/A4rkfvTm+sXy3qo4KNsWes7lBlCLpj4pM6OGl789BYxO/TeljCETLNKiSC3e4AQK0dR6U0FPjQ8SEw==}
+    peerDependencies:
+      '@trpc/server': 10.0.0-proxy-alpha.76
+    dependencies:
+      '@trpc/server': 10.0.0-proxy-alpha.76
+    dev: false
+
+  /@trpc/next/10.0.0-proxy-alpha.76_64strexlqkfkld3oed2bw3khry:
+    resolution: {integrity: sha512-OMB5SNmSYQ0gLrPbU/hXZEkXDLHMIPlRS4e3nAMe8g9vz8paIZNOkmGtWGWv3RUvdmBekELPD1UoqmrnwjCCig==}
+    peerDependencies:
+      '@tanstack/react-query': ^4.0.10
+      '@trpc/client': 10.0.0-proxy-alpha.76
+      '@trpc/react': 10.0.0-proxy-alpha.76
+      '@trpc/server': 10.0.0-proxy-alpha.76
+      next: '*'
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      '@tanstack/react-query': 4.3.4_biqbaboplfbrettd7655fr4n2y
+      '@trpc/client': 10.0.0-proxy-alpha.76_lrdkizc3pqff3x6qfp2kxksa4u
+      '@trpc/react': 10.0.0-proxy-alpha.76_pfpukihnog6vr3xtrgkjgdoi54
+      '@trpc/server': 10.0.0-proxy-alpha.76
+      next: 12.3.0_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-ssr-prepass: 1.5.0_react@18.2.0
+    dev: false
+
+  /@trpc/react/10.0.0-proxy-alpha.76_pfpukihnog6vr3xtrgkjgdoi54:
+    resolution: {integrity: sha512-5rlaxGECXhkyNpoXWQ4rfRXGtSU9cYRrNCbkJIukBc86xiyNskZDS4KW30RKyBr8oBUmF1k1lGuPmSeHMkJxtA==}
+    peerDependencies:
+      '@tanstack/react-query': ^4.0.10
+      '@trpc/client': 10.0.0-proxy-alpha.76
+      '@trpc/server': 10.0.0-proxy-alpha.76
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      '@tanstack/react-query': 4.3.4_biqbaboplfbrettd7655fr4n2y
+      '@trpc/client': 10.0.0-proxy-alpha.76_lrdkizc3pqff3x6qfp2kxksa4u
+      '@trpc/server': 10.0.0-proxy-alpha.76
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@trpc/server/10.0.0-proxy-alpha.76:
+    resolution: {integrity: sha512-QiwNTNcabYPP6Atj+Mhl76rmZkL7t91HvwhOQfRq3BvHejFzrVUOm/+/A4IBrRPGblew43yx4W77BdqCZZ67Aw==}
     dev: false
 
   /@types/json-schema/7.0.11:
@@ -586,6 +698,13 @@ packages:
   /cookie/0.4.2:
     resolution: {integrity: sha512-aSWTXFzaKWkvHO1Ny/s+ePFpvKsPnjc551iI41v3ny/ow6tBG5Vd+FuqGNhh1LxOmVzOlGUriIlOaokOvhaStA==}
     engines: {node: '>= 0.6'}
+    dev: false
+
+  /copy-anything/3.0.2:
+    resolution: {integrity: sha512-CzATjGXzUQ0EvuvgOCI6A4BGOo2bcVx8B+eC2nF862iv9fopnPQwlrbACakNCHRIJbCSBj+J/9JeDf60k64MkA==}
+    engines: {node: '>=12.13'}
+    dependencies:
+      is-what: 4.1.7
     dev: false
 
   /core-js-pure/3.25.1:
@@ -1469,6 +1588,11 @@ packages:
       call-bind: 1.0.2
     dev: true
 
+  /is-what/4.1.7:
+    resolution: {integrity: sha512-DBVOQNiPKnGMxRMLIYSwERAS5MVY1B7xYiGnpgctsOFvVDz9f9PFXXxMcTOHuoqYp4NK9qFYQaIC1NRRxLMpBQ==}
+    engines: {node: '>=12.13'}
+    dev: false
+
   /isexe/2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
@@ -1860,6 +1984,15 @@ packages:
     resolution: {integrity: sha512-WuxUnVtlWL1OfZFQFuqvnvs6MiAGk9UNsBostyBOB0Is9wb5uRESevA6rnl/rkksXaGX3GzZhPup5d6Vp1nFew==}
     dev: false
 
+  /prisma/4.3.1:
+    resolution: {integrity: sha512-90xo06wtqil76Xsi3mNpc4Js3SdDRR5g4qb9h+4VWY4Y8iImJY6xc3PX+C9xxTSt1lr0Q89A0MLkJjd8ax6KiQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 4.3.1
+    dev: false
+
   /prop-types/15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
     dependencies:
@@ -1890,6 +2023,14 @@ packages:
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
+
+  /react-ssr-prepass/1.5.0_react@18.2.0:
+    resolution: {integrity: sha512-yFNHrlVEReVYKsLI5lF05tZoHveA5pGzjFbFJY/3pOqqjGOmMmqx83N4hIjN2n6E1AOa+eQEUxs3CgRnPmT0RQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
@@ -2067,6 +2208,13 @@ packages:
       react: 18.2.0
     dev: false
 
+  /superjson/1.10.0:
+    resolution: {integrity: sha512-ks6I5fm5KXUbDqt4Epe1VwkKDaC9+kIj5HF7yhiHjChFne0EkFqsnTv1mdHE2IT6fq2CzLC3zeA/fw0BRIoNwA==}
+    engines: {node: '>=10'}
+    dependencies:
+      copy-anything: 3.0.2
+    dev: false
+
   /supports-color/7.2.0:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
     engines: {node: '>=8'}
@@ -2197,3 +2345,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zod/3.19.1:
+    resolution: {integrity: sha512-LYjZsEDhCdYET9ikFu6dVPGp2YH9DegXjdJToSzD9rO6fy4qiRYFoyEYwps88OseJlPyl2NOe2iJuhEhL7IpEA==}
+    dev: false

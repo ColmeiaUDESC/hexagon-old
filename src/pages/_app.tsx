@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import { SessionProvider } from 'next-auth/react';
 import { Session } from 'next-auth';
+import trpc from '../utils/trpc';
 
 interface Props {
   session: Session;
@@ -14,4 +15,4 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps<Pro
   );
 }
 
-export default MyApp;
+export default trpc.withTRPC(MyApp);
