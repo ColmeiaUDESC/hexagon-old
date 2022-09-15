@@ -25,6 +25,7 @@ specifiers:
   eslint-plugin-react-hooks: ^4.3.0
   next: 12.3.0
   next-auth: ^4.10.3
+  phosphor-react: ^1.4.1
   postcss: ^8.4.16
   prettier: ^2.7.1
   prisma: ^4.3.1
@@ -44,6 +45,7 @@ dependencies:
   '@trpc/server': 10.0.0-proxy-alpha.76
   next: 12.3.0_biqbaboplfbrettd7655fr4n2y
   next-auth: 4.10.3_biqbaboplfbrettd7655fr4n2y
+  phosphor-react: 1.4.1_react@18.2.0
   prisma: 4.3.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -2201,6 +2203,15 @@ packages:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
     engines: {node: '>=8'}
     dev: true
+
+  /phosphor-react/1.4.1_react@18.2.0:
+    resolution: {integrity: sha512-gO5j7U0xZrdglTAYDYPACU4xDOFBTJmptrrB/GeR+tHhCZF3nUMyGmV/0hnloKjuTrOmpSFlbfOY78H39rgjUQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /picocolors/1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}

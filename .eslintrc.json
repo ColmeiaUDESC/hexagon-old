@@ -33,6 +33,7 @@
   "plugins": ["react", "import"],
   "rules": {
     "import/no-unresolved": "error",
+    "jsx-a11y/anchor-is-valid": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
     "react/function-component-definition": [
