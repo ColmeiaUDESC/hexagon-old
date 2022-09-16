@@ -84,12 +84,12 @@ const WhatWeDo = () => {
       </motion.div>
       <motion.div variants={animationVariantsRight} className="flex flex-col gap-8">
         {content.map((item) => (
-          <>
+          <div key={item.id} className="w-full">
             <button
               onClick={() => setActive(item.id)}
               key={item.id}
               type="button"
-              className={clsx('text-left p-8  focus-ring hover-ring rounded-md text-black ', {
+              className={clsx('w-full text-left p-8 focus-ring hover-ring rounded-md text-black ', {
                 'bg-primary text-white dark:bg-primary dark:text-white': active === item.id,
                 'bg-gray-100 dark:bg-gray-800 dark:text-white': !(active === item.id)
               })}
@@ -97,9 +97,9 @@ const WhatWeDo = () => {
               <span className="text-2xl font-bold">{item.title}</span>
             </button>
             {active === item.id && (
-              <p className="text-black dark:text-white font-medium text-lg px-4">{item.description}</p>
+              <p className="text-black dark:text-white font-medium text-lg p-4">{item.description}</p>
             )}
-          </>
+          </div>
         ))}
       </motion.div>
     </motion.div>
