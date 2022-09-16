@@ -36,7 +36,7 @@ const Article = ({ title, date, path, imageHref }: Props) => (
         </p>
         <h1 className="w-fit font-bold text-black text-2xl dark:text-white">
           {title}
-          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-primary" />
+          <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-1 bg-primary" />
         </h1>
       </div>
     </motion.a>
