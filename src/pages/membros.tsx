@@ -54,7 +54,7 @@ const Member = ({ name, interests, description, avatarHref, href }: MemberProps)
           </span>
         ))}
       </div>
-      <p className="transition-all duration-300 text-gray-500 font-medium dark:group-hover:text-white group-hover:text-black">
+      <p className="transition-all duration-300 text-gray-500 font-medium dark:group-hover:text-white group-hover:text-black dark:group-focus:text-white group-focus:text-black">
         {description}
       </p>
     </div>
