@@ -49,13 +49,7 @@ const Member = ({ name, interests, description, avatarHref, href }: MemberProps)
       </h1>
       <div className="flex gap-2">
         {interests.map((interest) => (
-          <span
-            key={interest}
-            className="uppercase px-2 rounded py-1 font-bold text-white dark:text-black"
-            style={{
-              backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`
-            }}
-          >
+          <span key={interest} className="uppercase px-2 rounded py-1 font-bold bg-red-600 text-white dark:text-black">
             {interest}
           </span>
         ))}
