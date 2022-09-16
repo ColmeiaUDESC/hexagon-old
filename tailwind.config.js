@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   darkMode: 'class',
   content: [
@@ -7,7 +9,12 @@ module.exports = {
     './src/layouts/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        gray: colors.neutral,
+        primary: '#FFB200'
+      }
+    }
   },
   plugins: []
 };
