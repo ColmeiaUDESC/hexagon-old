@@ -40,12 +40,13 @@ const Home: NextPage = () => (
 
             <button
               type="button"
-              className="px-8 py-6 text-xl rounded-md text-black font-bold focus-ring hover-ring dark:text-white"
+              className="px-8 py-6 text-xl rounded-md text-black font-bold focus-ring hover-ring dark:text-white hover:bg-primary"
             >
               Conheça mais
             </button>
           </div>
         </div>
+        <img src="/illustration.svg" alt="" />
       </div>
     </div>
     <div className="mt-8 max-w-6xl w-full mx-auto">
