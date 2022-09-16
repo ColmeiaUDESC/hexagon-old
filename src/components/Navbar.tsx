@@ -3,6 +3,7 @@ import { Moon, Sun } from 'phosphor-react';
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import siteLinks from '../utils/siteLinks';
 
 const animationVariantsContainer = {
   hidden: {
@@ -40,29 +41,6 @@ const test = {
     y: 0
   }
 };
-
-const navbarLinks = [
-  {
-    id: 0,
-    name: 'Blog',
-    path: '/blog'
-  },
-  {
-    id: 1,
-    name: 'Membros',
-    path: '/membros'
-  },
-  {
-    id: 2,
-    name: 'Projetos',
-    path: '/projetos'
-  },
-  {
-    id: 30,
-    name: 'Contato',
-    path: '/contato'
-  }
-];
 
 const Navbar = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
@@ -113,7 +91,7 @@ const Navbar = () => {
           </motion.a>
         </Link>
         <motion.ul variants={animationVariantsItem} className="flex items-center gap-12">
-          {navbarLinks.map((link) => (
+          {siteLinks.map((link) => (
             <Link href={link.path} key={link.id} passHref>
               <motion.a
                 variants={test}
