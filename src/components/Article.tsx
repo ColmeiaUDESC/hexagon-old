@@ -59,12 +59,15 @@ const ArticleItem = ({ title, date, path, imageHref }: Props) => (
 const Article = () => (
   <div className="max-w-6xl w-full">
     <div className="w-full flex flex-col gap-4">
-      <Link href="/" passHref>
-        <a className="flex items-center gap-2 self-end font-medium text-gray-500 hover:text-black dark:text-gray-500 dark:hover:text-white transition-colors duration-300">
-          Veja todas as postagens
-          <ArrowRight size={20} weight="regular" />
-        </a>
-      </Link>
+      <div className="flex justify-between items-center w-full">
+        <h1 className="text-4xl font-bold text-black dark:text-white">Últimas postagens</h1>
+        <Link href="/" passHref>
+          <a className="flex items-center gap-2 font-medium text-gray-500 hover:text-black dark:text-gray-500 dark:hover:text-white transition-colors duration-300">
+            Veja todas as postagens
+            <ArrowRight size={20} weight="regular" />
+          </a>
+        </Link>
+      </div>
       <motion.div
         variants={animationVariantsContainer}
         initial="hidden"
