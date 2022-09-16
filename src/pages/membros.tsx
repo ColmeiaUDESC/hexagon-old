@@ -39,15 +39,9 @@ const Member = ({ name, interests, description, avatarHref, href }: MemberProps)
     variants={memberVariants}
     className="group flex flex-col gap-4 focus:outline-none"
   >
-    <div
-      className="relative w-full h-96 rounded-md focus-ring hover-ring overflow-hidden"
-      style={{
-        backgroundImage: `url(${avatarHref})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center'
-      }}
-    />
+    <div className="relative w-full h-96 rounded-md focus-ring hover-ring overflow-hidden">
+      <Image src={avatarHref} layout="fill" objectFit="cover" alt={name} />
+    </div>
     <div className="flex flex-col gap-2">
       <h1 className="w-fit font-bold text-black text-2xl dark:text-white">
         {name}
