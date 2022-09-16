@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const content = [
   {
@@ -22,12 +23,52 @@ const content = [
   }
 ];
 
+const animationVariantsContainer = {
+  hidden: {
+    opacity: 1
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const animationVariantsItemLeft = {
+  hidden: {
+    opacity: 0,
+    x: -100
+  },
+  visible: {
+    opacity: 1,
+    x: 0
+  }
+};
+
+const animationVariantsRight = {
+  hidden: {
+    opacity: 0,
+    x: 100
+  },
+  visible: {
+    opacity: 1,
+    x: 0
+  }
+};
+
 const WhatWeDo = () => {
   const [active, setActive] = useState<number>(0);
 
   return (
-    <div className="w-full h-screen grid grid-cols-2 content-center gap-8">
-      <div className="block">
+    <motion.div
+      variants={animationVariantsContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="w-full h-screen grid grid-cols-2 content-center gap-8"
+    >
+      <motion.div variants={animationVariantsItemLeft} className="block">
         <h1 className="text-6xl font-bold text-black dark:text-white">Um pouco do que fazemos</h1>
         <p className="mt-4 text-black text-lg dark:text-white">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repellat suscipit sed, nesciunt aliquid iure
@@ -40,8 +81,8 @@ const WhatWeDo = () => {
         >
           Processo seletivo
         </button>
-      </div>
-      <div className="flex flex-col gap-8">
+      </motion.div>
+      <motion.div variants={animationVariantsRight} className="flex flex-col gap-8">
         {content.map((item) => (
           <>
             <button
@@ -60,8 +101,8 @@ const WhatWeDo = () => {
             )}
           </>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

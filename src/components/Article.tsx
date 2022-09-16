@@ -14,7 +14,7 @@ const animationVariantsContainer = {
   hidden: {
     opacity: 1
   },
-  show: {
+  visible: {
     opacity: 1,
     transition: {
       staggerChildren: 0.1
@@ -27,7 +27,7 @@ const animationVariantsItem = {
     opacity: 0,
     y: -50
   },
-  show: {
+  visible: {
     opacity: 1,
     y: 0
   }
@@ -68,7 +68,7 @@ const Article = () => (
       <motion.div
         variants={animationVariantsContainer}
         initial="hidden"
-        whileInView="show"
+        whileInView="visible"
         viewport={{ once: true }}
         className="grid grid-cols-3 gap-8"
       >
