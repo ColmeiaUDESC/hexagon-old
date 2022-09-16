@@ -8,6 +8,7 @@ interface MemberProps {
   avatarHref: string;
   interests: ReadonlyArray<string>;
   href: string;
+  memberType: 'Bolsista' | 'Voluntário';
 }
 
 const containerVariants = {
@@ -31,7 +32,7 @@ const memberVariants = {
   }
 };
 
-const Member = ({ name, interests, description, avatarHref, href }: MemberProps) => (
+const Member = ({ name, interests, description, avatarHref, href, memberType }: MemberProps) => (
   <motion.a
     href={href}
     target="_blank"
@@ -43,13 +44,19 @@ const Member = ({ name, interests, description, avatarHref, href }: MemberProps)
       <Image src={avatarHref} layout="fill" objectFit="cover" alt={name} />
     </div>
     <div className="flex flex-col gap-2">
-      <h1 className="w-fit font-bold text-black text-2xl dark:text-white">
-        {name}
-        <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-1 bg-primary" />
+      <h1 className="flex w-full font-bold justify-between items-center text-black text-2xl dark:text-white">
+        <div className="block">
+          {name}
+          <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-1 bg-primary" />
+        </div>
+        <span className="text-sm font-normal text-gray-500">{memberType}</span>
       </h1>
       <div className="flex gap-2">
         {interests.map((interest) => (
-          <span key={interest} className="uppercase px-2 rounded py-1 font-bold bg-red-600 text-white dark:text-black">
+          <span
+            key={interest}
+            className="uppercase px-2 rounded py-1 font-bold text-xs bg-red-600 text-white dark:text-black"
+          >
             {interest}
           </span>
         ))}
@@ -74,6 +81,7 @@ const MembrosPage: NextPage = () => (
       avatarHref="https://github.com/joaodematte.png"
       description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe sed, magnam ullam a possimus vero nesciunt laborum autem consequatur odio voluptatem, hic unde voluptate sequi dolor fugit doloremque? Omnis!"
       interests={['Web dev', 'hacking']}
+      memberType="Voluntário"
     />
     <Member
       name="Luciano Wayand"
@@ -81,6 +89,7 @@ const MembrosPage: NextPage = () => (
       avatarHref="https://github.com/lucianowayand.png"
       description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe sed, magnam ullam a possimus vero nesciunt laborum autem consequatur odio voluptatem, hic unde voluptate sequi dolor fugit doloremque? Omnis!"
       interests={['Web dev']}
+      memberType="Bolsista"
     />
     <Member
       name="Gabriel Junkes"
@@ -88,6 +97,7 @@ const MembrosPage: NextPage = () => (
       avatarHref="https://github.com/gabrielfjunkes.png"
       description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe sed, magnam ullam a possimus vero nesciunt laborum autem consequatur odio voluptatem, hic unde voluptate sequi dolor fugit doloremque? Omnis!"
       interests={['Web dev']}
+      memberType="Bolsista"
     />
     <Member
       name="César Eduardo"
@@ -95,6 +105,7 @@ const MembrosPage: NextPage = () => (
       avatarHref="https://github.com/cesareds.png"
       description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe sed, magnam ullam a possimus vero nesciunt laborum autem consequatur odio voluptatem, hic unde voluptate sequi dolor fugit doloremque? Omnis!"
       interests={['Web dev']}
+      memberType="Bolsista"
     />
     <Member
       name="Geórgia Betina"
@@ -102,6 +113,7 @@ const MembrosPage: NextPage = () => (
       avatarHref="https://github.com/georgia-betina.png"
       description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe sed, magnam ullam a possimus vero nesciunt laborum autem consequatur odio voluptatem, hic unde voluptate sequi dolor fugit doloremque? Omnis!"
       interests={['Web dev']}
+      memberType="Voluntário"
     />
   </motion.div>
 );
