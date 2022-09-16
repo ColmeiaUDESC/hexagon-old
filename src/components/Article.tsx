@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'phosphor-react';
 
 interface Props {
   title: string;
@@ -9,7 +10,19 @@ interface Props {
   imageHref: string;
 }
 
-const animationVariants = {
+const animationVariantsContainer = {
+  hidden: {
+    opacity: 1
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const animationVariantsItem = {
   hidden: {
     opacity: 0,
     y: -50
@@ -20,9 +33,9 @@ const animationVariants = {
   }
 };
 
-const Article = ({ title, date, path, imageHref }: Props) => (
+const ArticleItem = ({ title, date, path, imageHref }: Props) => (
   <Link href={path} passHref>
-    <motion.a variants={animationVariants} className="group flex flex-col gap-4 focus:outline-none">
+    <motion.a variants={animationVariantsItem} className="group flex flex-col gap-4 focus:outline-none">
       <div className="relative w-full h-96 rounded-md focus-ring hover-ring overflow-hidden">
         <Image src={imageHref} layout="fill" alt="Article image" />
       </div>
@@ -41,6 +54,45 @@ const Article = ({ title, date, path, imageHref }: Props) => (
       </div>
     </motion.a>
   </Link>
+);
+
+const Article = () => (
+  <div className="max-w-6xl w-full">
+    <div className="w-full flex flex-col gap-4">
+      <Link href="/" passHref>
+        <a className="flex items-center gap-2 self-end font-medium text-gray-500 hover:text-black dark:text-gray-500 dark:hover:text-white transition-colors duration-300">
+          Veja todas as postagens
+          <ArrowRight size={20} weight="regular" />
+        </a>
+      </Link>
+      <motion.div
+        variants={animationVariantsContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="grid grid-cols-3 gap-8"
+      >
+        <ArticleItem
+          title="Desenvolvendo hexagon"
+          date={new Date()}
+          path="/"
+          imageHref="https://github.com/joaodematte.png"
+        />
+        <ArticleItem
+          title="Desenvolvendo hexagon"
+          date={new Date()}
+          path="/"
+          imageHref="https://github.com/lucianowayand.png"
+        />
+        <ArticleItem
+          title="Desenvolvendo hexagon"
+          date={new Date()}
+          path="/"
+          imageHref="https://github.com/gabrielfjunkes.png"
+        />
+      </motion.div>
+    </div>
+  </div>
 );
 
 export default Article;
