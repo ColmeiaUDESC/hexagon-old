@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply selection:bg-primary selection:text-black;
+}
+
 body {
   @apply p-8 bg-white dark:bg-gray-900 transition-all duration-300;
 }
