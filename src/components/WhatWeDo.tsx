@@ -57,7 +57,7 @@ const animationVariantsRight = {
   }
 };
 
-const WhatWeDo = () => {
+export default function WhatWeDo() {
   const [active, setActive] = useState<number>(0);
 
   return (
@@ -104,6 +104,4 @@ const WhatWeDo = () => {
       </motion.div>
     </motion.div>
   );
-};
-
-export default WhatWeDo;
+}

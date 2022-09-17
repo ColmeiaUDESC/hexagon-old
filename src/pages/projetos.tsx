@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight } from 'phosphor-react';
-import { useState } from 'react';
+import { ReactElement, useState } from 'react';
 
 const variants = {
   hidden: {
@@ -11,7 +11,7 @@ const variants = {
   }
 };
 
-const Projeto = () => {
+function Projeto(): ReactElement {
   const [isActive, setIsActive] = useState<boolean>(false);
 
   const handleHover = () => {
@@ -51,24 +51,24 @@ const Projeto = () => {
       </p>
     </a>
   );
-};
+}
 
-const ProjetosPage = () => (
-  <div className="w-full min-h-screen flex justify-center items-center">
-    <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <Projeto />
-      <Projeto />
-      <Projeto />
-      <Projeto />
-      <Projeto />
-      <Projeto />
-      <Projeto />
-      <Projeto />
-      <Projeto />
-      <Projeto />
-      <Projeto />
+export default function ProjetosPage() {
+  return (
+    <div className="w-full min-h-screen flex justify-center items-center">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <Projeto />
+        <Projeto />
+        <Projeto />
+        <Projeto />
+        <Projeto />
+        <Projeto />
+        <Projeto />
+        <Projeto />
+        <Projeto />
+        <Projeto />
+        <Projeto />
+      </div>
     </div>
-  </div>
-);
-
-export default ProjetosPage;
+  );
+}

@@ -36,13 +36,6 @@
     "jsx-a11y/anchor-is-valid": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
-    "react/function-component-definition": [
-      "error",
-      {
-        "namedComponents": ["function-declaration", "arrow-function"],
-        "unnamedComponents": ["function-expression", "arrow-function"]
-      }
-    ],
     "import/order": [
       "error",
       { "groups": ["type", "object", "builtin", "external", "internal", "parent", "sibling", "index"] }

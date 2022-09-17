@@ -42,7 +42,7 @@ const test = {
   }
 };
 
-const Navbar = () => {
+export default function Navbar() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [scrollPosition, setScrollPosition] = useState<number>(0);
 
@@ -113,6 +113,4 @@ const Navbar = () => {
       </motion.div>
     </nav>
   );
-};
-
-export default Navbar;
+}
