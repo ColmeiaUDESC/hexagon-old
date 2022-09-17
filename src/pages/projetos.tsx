@@ -54,8 +54,17 @@ const Projeto = () => {
 };
 
 const ProjetosPage = () => (
-  <div className="p-8 w-full h-screen flex justify-center items-center">
+  <div className="w-full min-h-screen flex justify-center items-center">
     <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <Projeto />
+      <Projeto />
+      <Projeto />
+      <Projeto />
+      <Projeto />
+      <Projeto />
+      <Projeto />
+      <Projeto />
+      <Projeto />
       <Projeto />
       <Projeto />
     </div>

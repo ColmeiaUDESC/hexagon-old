@@ -72,10 +72,10 @@ const Navbar = () => {
   return (
     <nav
       className={clsx(
-        'fixed top-0 left-0 w-full flex justify-between transition-all border-gray-100 dark:border-gray-800 duration-300 items-center z-50 bg-opacity-80 backdrop-blur bg-white dark:bg-gray-900 dark:bg-opacity-80',
+        'px-8 fixed top-0 left-0 w-full flex justify-between transition-all border-gray-100 dark:border-gray-800 duration-300 items-center z-50 bg-opacity-80 backdrop-blur bg-white dark:bg-gray-900 dark:bg-opacity-80',
         {
-          'px-4 py-8 border-b': scrollPosition > 100,
-          'px-8 py-12': scrollPosition <= 100
+          'py-8 border-b': scrollPosition > 100,
+          'py-12': scrollPosition <= 100
         }
       )}
     >

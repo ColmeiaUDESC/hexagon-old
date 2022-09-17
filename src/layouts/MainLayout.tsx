@@ -9,7 +9,7 @@ interface Props {
 const MainLayout = ({ children }: Props) => (
   <>
     <Navbar />
-    <div className="w-full max-w-6xl mx-auto">{children}</div>
+    <div className="mt-32 w-full max-w-6xl mx-auto p-8">{children}</div>
     <Footer />
   </>
 );

@@ -73,7 +73,7 @@ const MembrosPage: NextPage = () => (
     variants={containerVariants}
     initial="hidden"
     animate="visible"
-    className="mt-32 w-full min-h-screen p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center gap-8"
+    className="w-full min-h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center gap-8"
   >
     <Member
       name="João Dematte"

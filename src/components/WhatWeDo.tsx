@@ -66,18 +66,18 @@ const WhatWeDo = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="w-full h-screen grid grid-cols-2 content-center gap-8"
+      className="mt-24 lg:mt-0 w-full min-h-screen grid grid-cols-1 lg:grid-cols-2 content-center gap-8"
     >
       <motion.div variants={animationVariantsItemLeft} className="block">
-        <h1 className="text-6xl font-bold text-black dark:text-white">Um pouco do que fazemos</h1>
-        <p className="mt-4 text-black text-lg dark:text-white">
+        <h1 className="text-2xl lg:text-4xl font-bold text-black dark:text-white">Um pouco do que fazemos</h1>
+        <p className="mt-4 text-black lg:text-lg dark:text-white">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repellat suscipit sed, nesciunt aliquid iure
           architecto dicta at tenetur totam porro a dignissimos doloremque aliquam, accusamus sunt possimus. Voluptate,
           obcaecati.
         </p>
         <button
           type="button"
-          className="mt-8 px-8 py-6 text-xl bg-gray-800 rounded-md text-white font-bold focus-ring hover-ring"
+          className="mt-8 px-8 py-6 lg:text-xl bg-gray-800 rounded-md text-white font-bold focus-ring hover-ring"
         >
           Processo seletivo
         </button>
@@ -94,10 +94,10 @@ const WhatWeDo = () => {
                 'bg-gray-100 dark:bg-gray-800 dark:text-white': !(active === item.id)
               })}
             >
-              <span className="text-2xl font-bold">{item.title}</span>
+              <span className="text-xl lg:text-2xl font-bold">{item.title}</span>
             </button>
             {active === item.id && (
-              <p className="text-black dark:text-white font-medium text-lg p-4">{item.description}</p>
+              <p className="text-black dark:text-white font-medium lg:text-lg p-4">{item.description}</p>
             )}
           </div>
         ))}
