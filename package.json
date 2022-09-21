@@ -17,7 +17,7 @@
     "@trpc/server": "10.0.0-proxy-alpha.76",
     "clsx": "^1.2.1",
     "framer-motion": "^7.3.5",
-    "next": "12.3.0",
+    "next": "^12.3.0",
     "next-auth": "^4.10.3",
     "phosphor-react": "^1.4.1",
     "prisma": "^4.3.1",
