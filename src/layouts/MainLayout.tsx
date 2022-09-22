@@ -10,7 +10,7 @@ export default function MainLayout({ children }: Props) {
   return (
     <>
       <Navbar />
-      <div className="mt-32 w-full max-w-6xl mx-auto p-8">{children}</div>
+      <div className="w-full max-w-6xl mx-auto p-8">{children}</div>
       <Footer />
     </>
   );

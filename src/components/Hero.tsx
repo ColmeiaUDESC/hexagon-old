@@ -25,7 +25,7 @@ const animationVariantsTextItem = {
 
 export default function Hero() {
   return (
-    <div className="w-full max-w-6xl mx-auto h-screen grid grid-cols-1 lg:grid-cols-2 gap-8 content-center">
+    <div className="mx-auto h-screen grid grid-cols-1 lg:grid-cols-2 gap-8 content-center">
       <motion.div variants={animationVariantsTextContainer} initial="hidden" animate="visible" className="block">
         <motion.h1
           variants={animationVariantsTextItem}

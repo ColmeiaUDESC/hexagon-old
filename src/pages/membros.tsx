@@ -76,7 +76,7 @@ export default function MembrosPage(): ReactElement {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="w-full min-h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center gap-8"
+      className="mt-32 min-h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center gap-8"
     >
       <Member
         name="João Dematte"

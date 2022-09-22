@@ -55,8 +55,8 @@ function Projeto(): ReactElement {
 
 export default function ProjetosPage() {
   return (
-    <div className="w-full min-h-screen flex justify-center items-center">
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div className="mt-32 min-h-screen flex justify-center items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <Projeto />
         <Projeto />
         <Projeto />

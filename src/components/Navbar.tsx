@@ -85,7 +85,7 @@ export default function Navbar() {
         animate="visible"
         className="w-full max-w-6xl mx-auto flex justify-between items-center"
       >
-        <Link href="/">
+        <Link href="/" passHref>
           <motion.a variants={animationVariantsItem} className="font-extrabold text-2xl dark:text-white">
             hexagon
           </motion.a>
