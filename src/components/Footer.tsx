@@ -19,7 +19,7 @@ export default function Footer() {
             </a>
           </p>
         </div>
-        <div className="hidden lg:block">
+        <div className="block">
           <h1 className="font-bold text-lg">Site</h1>
           <ul className="flex flex-col gap-2">
             {siteLinks.map((link) => (
@@ -31,7 +31,7 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <div className="hidden lg:block">
+        <div className="block">
           <h1 className="font-bold text-lg">Processo seletivo</h1>
           <p className="text-gray-500">No momento nosso processo seletivo não está aberto</p>
         </div>
