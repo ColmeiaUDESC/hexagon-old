@@ -43,7 +43,7 @@ const test = {
 };
 
 export default function Navbar() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<string>('dark');
   const [scrollPosition, setScrollPosition] = useState<number>(0);
 
   const handleScroll = () => {
@@ -51,13 +51,15 @@ export default function Navbar() {
     setScrollPosition(position);
   };
 
-  const handleChangeTheme = (currentTheme: 'light' | 'dark') => {
+  const handleChangeTheme = (currentTheme: string) => {
     if (currentTheme === 'light') {
       setTheme('dark');
       document.documentElement.className = 'dark';
+      localStorage.setItem('theme', 'dark');
     } else {
       setTheme('light');
       document.documentElement.className = 'light';
+      localStorage.setItem('theme', 'light');
     }
   };
 
@@ -67,6 +69,15 @@ export default function Navbar() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    const themeStorage = localStorage.getItem('theme');
+
+    if (themeStorage) {
+      setTheme(themeStorage);
+      document.documentElement.className = themeStorage;
+    }
   }, []);
 
   return (
