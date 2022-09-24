@@ -29,7 +29,7 @@ export default function Hero() {
       <motion.div variants={animationVariantsTextContainer} initial="hidden" animate="visible" className="block">
         <motion.h1
           variants={animationVariantsTextItem}
-          className="font-extrabold text-2xl lg:text-6xl text-black dark:text-white"
+          className="font-extrabold text-3xl lg:text-6xl text-black dark:text-white"
         >
           Grupo de Extensão em Software e Hardware Livre
         </motion.h1>
