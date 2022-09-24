@@ -8,7 +8,6 @@ interface MemberProps {
   avatarHref: string;
   interests: ReadonlyArray<string>;
   href: string;
-  memberType: 'Bolsista' | 'Voluntário';
 }
 
 const containerVariants = {
@@ -32,7 +31,7 @@ const memberVariants = {
   }
 };
 
-function Member({ name, interests, description, avatarHref, href, memberType }: MemberProps) {
+function Member({ name, interests, description, avatarHref, href }: MemberProps) {
   return (
     <motion.a
       href={href}
@@ -45,12 +44,11 @@ function Member({ name, interests, description, avatarHref, href, memberType }: 
         <Image src={avatarHref} layout="fill" objectFit="cover" alt={name} />
       </div>
       <div className="flex flex-col gap-2">
-        <h1 className="flex w-full font-bold justify-between items-center text-black text-2xl dark:text-white">
+        <h1 className="w-fit font-bold text-black text-2xl dark:text-white">
           <div className="block">
             {name}
             <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-1 bg-primary" />
           </div>
-          <span className="text-sm font-normal text-gray-500">{memberType}</span>
         </h1>
         <div className="flex gap-2">
           {interests.map((interest) => (
@@ -84,7 +82,6 @@ export default function MembrosPage(): ReactElement {
         avatarHref="https://github.com/joaodematte.png"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe sed, magnam ullam a possimus vero nesciunt laborum autem consequatur odio voluptatem, hic unde voluptate sequi dolor fugit doloremque? Omnis!"
         interests={['Web dev', 'hacking']}
-        memberType="Voluntário"
       />
       <Member
         name="Luciano Wayand"
@@ -92,7 +89,6 @@ export default function MembrosPage(): ReactElement {
         avatarHref="https://github.com/lucianowayand.png"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe sed, magnam ullam a possimus vero nesciunt laborum autem consequatur odio voluptatem, hic unde voluptate sequi dolor fugit doloremque? Omnis!"
         interests={['Web dev']}
-        memberType="Bolsista"
       />
       <Member
         name="Gabriel Junkes"
@@ -100,7 +96,6 @@ export default function MembrosPage(): ReactElement {
         avatarHref="https://github.com/gabrielfjunkes.png"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe sed, magnam ullam a possimus vero nesciunt laborum autem consequatur odio voluptatem, hic unde voluptate sequi dolor fugit doloremque? Omnis!"
         interests={['Web dev']}
-        memberType="Bolsista"
       />
       <Member
         name="César Eduardo"
@@ -108,7 +103,6 @@ export default function MembrosPage(): ReactElement {
         avatarHref="https://github.com/cesareds.png"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe sed, magnam ullam a possimus vero nesciunt laborum autem consequatur odio voluptatem, hic unde voluptate sequi dolor fugit doloremque? Omnis!"
         interests={['Web dev']}
-        memberType="Bolsista"
       />
       <Member
         name="Geórgia Betina"
@@ -116,7 +110,6 @@ export default function MembrosPage(): ReactElement {
         avatarHref="https://github.com/georgia-betina.png"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe sed, magnam ullam a possimus vero nesciunt laborum autem consequatur odio voluptatem, hic unde voluptate sequi dolor fugit doloremque? Omnis!"
         interests={['Web dev']}
-        memberType="Voluntário"
       />
     </motion.div>
   );
