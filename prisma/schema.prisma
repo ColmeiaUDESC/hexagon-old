@@ -14,7 +14,7 @@ datasource db {
 model Artifacts {
   title String @unique
   type  String
-  data  Json
+  value String
 }
 
 model Posts {
@@ -71,7 +71,11 @@ model User {
 }
 
 model Profile {
-  userId String @unique
-  data   Json
-  user   User   @relation(fields: [userId], references: [id])
+  github    String?
+  twitter   String?
+  instagram String?
+  discord   String?
+  imagemUrl String?
+  userId    String  @unique
+  user      User    @relation(fields: [userId], references: [id])
 }
